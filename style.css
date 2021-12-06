@@ -1,6 +1,6 @@
 :root{
     --pink: #DE78E7;
-    --background-gray: hsla(0, 0%, 93%, 0.8);
+    --background-gray: hsla(0, 0%, 93%, 0.95);
     --light_gray: #808080;
     --dark_gray: #545454;
     --blue: #151F2E;
@@ -46,6 +46,9 @@
 .gray{
     color: var(--dark_gray);
 }
+.light-gray{
+    color: var(--light_gray) !important;
+}
 
 html,
 body{
@@ -73,12 +76,12 @@ nav{
 
 .navbar-brand,
 .offcanvas-title{
-    height: 5rem ;
+    height: 4.5rem ;
 }
 
 @media (max-width: 1200px) {
     .navbar-brand{
-        height: 4rem;
+        height: 3.5em;
     }
 }
 
@@ -189,4 +192,14 @@ nav{
 #section2,
 #section3{
     margin: 1.5rem 2rem;
+}
+
+footer{
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    border-top: 0.25px solid var(--pink);
+}
+footer img{
+    height: 2rem;
+    object-fit: scale-down;
 }
