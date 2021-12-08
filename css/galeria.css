@@ -1,0 +1,26 @@
+:root{
+    --pink: #DE78E7;
+    --background-gray: hsla(0, 0%, 93%, 0.95);
+    --light_gray: #808080;
+    --dark_gray: #545454;
+    --blue: #151F2E;
+}
+
+.active_galery{
+    color: var(--blue) !important;
+    font-weight: 700 !important;
+}
+
+.active_galery:hover{
+    color: var(--blue) !important;
+}
+
+.imgs{
+    cursor: pointer;
+    object-fit: cover;
+    transition: transform 0.2s ease-out;
+}
+
+.imgs:hover{
+    transform: scale(1.1);
+}
