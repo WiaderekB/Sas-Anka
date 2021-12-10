@@ -14,7 +14,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -89,6 +89,12 @@
             </div>
 
             <div class="col-12 my-3"><input type="submit" value="Dodaj do galerii"></div>
+            <div class='text-danger'>
+                <?php 
+                if(isset($_GET['noFile']) and $_GET['noFile'] == true) 
+                {echo "Dodaj zdjęcie!";} 
+                ?>
+            </div>
         </form>
 
         <div class="row">

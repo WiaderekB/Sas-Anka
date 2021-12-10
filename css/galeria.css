@@ -20,6 +20,13 @@
     object-fit: cover;
     transition: transform 0.2s ease-out;
     display: none;
+    height: 15rem;
+}
+
+@media (max-width: 576px) {
+    .imgs{
+        height: 32.5rem;
+    }
 }
 
 .imgs:hover{

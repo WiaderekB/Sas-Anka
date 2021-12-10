@@ -7,7 +7,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -67,10 +67,10 @@
     <div class="container">
         <div class="row mx-3 fw-normal mt-4 border-bottom border-2">
             <div class="col-auto nav-link" id='all' style="cursor: pointer;" onclick="sort('all')">Wszystko</div>
-            <div class="col-auto nav-link" id='kis' style="cursor: pointer; <?php if($show == 'kis'){echo'vis';}?> " onclick="sort('kis')">Kwiaty i sadzonki</div>
-            <div class="col-auto nav-link" id="wiazanki" style="cursor: pointer; <?php if($show == 'wiazanki'){echo'vis';}?> " onclick="sort('wiazanki')">Wiązanki</div>
-            <div class="col-auto nav-link" id="wience" style="cursor: pointer; <?php if($show == 'wience'){echo'vis';}?> " onclick="sort('wience')">Wieńce</div>
-            <div class="col-auto nav-link" id="dekoracje" style="cursor: pointer; <?php if($show == 'dekoracje'){echo'vis';}?> " onclick="sort('dekoracje')">Dekoracje</div>
+            <div class="col-auto nav-link" id='kis' style="cursor: pointer;" onclick="sort('kis')">Kwiaty i sadzonki</div>
+            <div class="col-auto nav-link" id="wiazanki" style="cursor: pointer;" onclick="sort('wiazanki')">Wiązanki</div>
+            <div class="col-auto nav-link" id="wience" style="cursor: pointer;" onclick="sort('wience')">Wieńce</div>
+            <div class="col-auto nav-link" id="dekoracje" style="cursor: pointer;" onclick="sort('dekoracje')">Dekoracje</div>
         </div>
 
 <?php
@@ -93,36 +93,67 @@
 
         </div>
     </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-        <script>
+    <footer class="bg-white light-gray px-5 pt-3 pt-sm-4">
+            <div class="d-flex flex-wrap flex-column flex-lg-row justify-content-between align-items-center py-3 mt-4 border-top">
+                <div class="col col-lg-4 mb-0 text-muted order-2 order-lg-1">&copy; 2022 Bartosz Wiaderek</div>
+                <img src="img/logo-sm.png" class="order-1 order-lg-2 col-12 col-lg-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto" alt="">
+                <div class="nav col-md-4 justify-content-end d-none d-lg-flex order-3">
+                    <li class="nav-item"><a href="index.php" class="nav-link px-1 px-xl-2 px-xxl-3 text-muted">Strona główna</a> </li>
+                    <li class="nav-item"><a href="galeria.php" class="nav-link px-1 px-xl-2 px-xxl-3 text-muted">Galeria</a> </li>
+                    <li class="nav-item"><a href="aktualnosci.php" class="nav-link px-1 px-xl-2 px-xxl-3 text-muted">Aktualnosci</a> </li>
+                    <li class="nav-item"><a href="kontakt.php" class="nav-link px-1 px-xl-2 px-xxl-3 text-muted">Kontakt</a> </li>
+                </div>
+            </div>
+        </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
 
 
-            <?php
-            if (!isset($_GET['g'])) {
-                echo "$('.imgs').addClass('vis');";
+    <?php
+    if (!isset($_GET['g'])) {
+        echo "$('.imgs').addClass('vis');";
 
-                echo "$('#all').addClass('active_galery');";
-            }  
-            ?>
+        echo "$('#all').addClass('active_galery');";
+    }  else {
+        switch ($show){
+            case 'kis';
+                echo "$('.kis').addClass('vis');";
+                echo "$('kis').addClass('active_galery');";
+                
+            case 'wiazanki';
+                echo "$('.wiazanki').addClass('vis');";
+                echo "$('wiazanki').addClass('active_galery');";
 
-            function sort(item){
+            case 'wience';
+                echo "$('.wience').addClass('vis');";
+                echo "$('wience').addClass('active_galery');";
 
-                $('.active_galery').removeClass('active_galery');
+            case 'dekoracje';
+                echo "$('.dekoracje').addClass('vis');";
+                echo "$('#dekoracje').addClass('active_galery');";
+        }
+    }
+    ?>
+    function sort(item){
 
-                $('#'+ item).addClass('active_galery');
+        $('.active_galery').removeClass('active_galery');
 
-                if (item == 'all'){
-                    $('.imgs').addClass('vis');
+        $('#'+ item).addClass('active_galery');
 
-                } else {
-                $('.imgs').removeClass('vis');
+        if (item == 'all'){
+            $('.imgs').addClass('vis');
 
-                $('.' + item).addClass('vis');
-                }
-            }
+        } else {
+        $('.imgs').removeClass('vis');
 
-        </script>
+        $('.' + item).addClass('vis');
+        }
+    }
+
+</script>
 </body>
 </html>

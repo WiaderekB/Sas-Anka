@@ -6,6 +6,10 @@
     --blue: #151F2E;
 }
 
+a[target="_blank"] {
+    display: none;
+}
+
 nav{
     border-bottom: solid 3px var(--pink);
     border-bottom-left-radius: 1.5rem;
@@ -26,11 +30,30 @@ nav{
     background-color: var(--pink);
 }
 
+.btn2{
+    background-color: var(--blue);
+    border-radius: 0.75rem;
+    border: none;
+    padding: 0.75rem 2.75rem;
+    color: var(--background-gray);
+    transition: all 0.3s ease;
+}
+.btn2:hover{
+    border-radius: 0.1rem;
+    border-color: none;
+    color: var(--background-gray);
+    background-color: var(--blue);
+}
+
 @media (min-width: 1200px) {
     .px-6{
         padding-left: 5rem !important;
         padding-right: 5rem !important;
     }
+}
+
+.fs-7{
+    font-size: 1.1rem;
 }
 
 .navbar-brand,

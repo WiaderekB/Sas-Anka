@@ -1,4 +1,6 @@
 <?php
+if($_FILES['file']['name'] != '') {
+    print_r($_FILES['file']);
     require_once('connect.php');
 
     $categories = $_POST['categories'];
@@ -11,20 +13,23 @@
     }
 
 
-    $file = $_FILES['file'];
+        $file = $_FILES['file'];
 
-    $fileName = $_FILES['file']['name'];
-    $fileTmpName = $_FILES['file']['tmp_name'];
+        $fileName = $_FILES['file']['name'];
+        $fileTmpName = $_FILES['file']['tmp_name'];
 
-    $fileDestination = 'uploads_gallery/'.$fileName;
-    move_uploaded_file($fileTmpName, $fileDestination);
-    
-    $conn = mysqli_connect($host, $db_user, $db_pass, $db_name);
+        $fileDestination = 'uploads_gallery/'.$fileName;
+        move_uploaded_file($fileTmpName, $fileDestination);
+        
+        $conn = mysqli_connect($host, $db_user, $db_pass, $db_name);
 
-    $sql = "INSERT INTO galeria(img, category) VALUES('$fileDestination', '$finalCategories')";
+        $sql = "INSERT INTO galeria(img, category) VALUES('$fileDestination', '$finalCategories')";
 
 
-    mysqli_query($conn, $sql);
+        mysqli_query($conn, $sql);
 
-    header('Location: galeria_panel.php')
+        header('Location: galeria_panel.php');
+    }  else {
+        header('Location: galeria_panel.php?noFile=true');
+    }
 ?>
