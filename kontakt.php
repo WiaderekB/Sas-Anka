@@ -30,19 +30,19 @@
 
             <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0 fs-5">
                 <li class="nav-item  mx-3 my-1">
-                    <a class="nav-link" href="index.html">Strona główna</a>
+                    <a class="nav-link" href="index.php">Strona główna</a>
                 </li>
 
                 <li class="nav-item  mx-3 my-1">
-                    <a class="nav-link" href="galeria.html">Galeria</a>
+                    <a class="nav-link" href="galeria.php">Galeria</a>
                 </li>
 
                 <li class="nav-item  mx-3 my-1">
-                    <a class="nav-link" href="nowinki.html">Nowinki</a>
+                    <a class="nav-link" href="nowinki.php">Nowinki</a>
                 </li>
 
                 <li class="nav-item  mx-3 my-1">
-                    <a class="nav-link active" href="kontakt.html">Kontakt</a>
+                    <a class="nav-link active" href="kontakt.php">Kontakt</a>
                 </li>
             </ul>
 
@@ -80,10 +80,10 @@
             <div class="col col-lg-4 mb-0 text-muted order-2 order-lg-1">&copy; 2022 Bartosz Wiaderek</div>
             <img src="img/logo-sm.png" class="order-1 order-lg-2 col-12 col-lg-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto" alt="">
             <div class="nav col-md-4 justify-content-end d-none d-lg-flex order-3">
-                <li class="nav-item"><a href="index.html" class="nav-link px-1 px-xl-2 px-xxl-3 text-muted">Strona główna</a> </li>
-                <li class="nav-item"><a href="galeria.html" class="nav-link px-1 px-xl-2 px-xxl-3 text-muted">Galeria</a> </li>
-                <li class="nav-item"><a href="aktualnosci.html" class="nav-link px-1 px-xl-2 px-xxl-3 text-muted">Aktualnosci</a> </li>
-                <li class="nav-item"><a href="kontakt.html" class="nav-link px-1 px-xl-2 px-xxl-3 text-muted">Kontakt</a> </li>
+                <li class="nav-item"><a href="index.php" class="nav-link px-1 px-xl-2 px-xxl-3 text-muted">Strona główna</a> </li>
+                <li class="nav-item"><a href="galeria.php" class="nav-link px-1 px-xl-2 px-xxl-3 text-muted">Galeria</a> </li>
+                <li class="nav-item"><a href="aktualnosci.php" class="nav-link px-1 px-xl-2 px-xxl-3 text-muted">Aktualnosci</a> </li>
+                <li class="nav-item"><a href="kontakt.php" class="nav-link px-1 px-xl-2 px-xxl-3 text-muted">Kontakt</a> </li>
             </div>
         </div>
     </footer>

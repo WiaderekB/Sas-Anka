@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sas-Anka - Galeria</title>
+    <title>Sas-Anka - Aktualności</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/heading.css">
-    <link rel="stylesheet" href="css/galeria.css">
+    <link rel="stylesheet" href="css/aktualnosci.css">
 </head>
 <body class="bg-light">
 
@@ -33,19 +33,19 @@
 
             <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0 fs-5">
                 <li class="nav-item  mx-3 my-1">
-                    <a class="nav-link" href="index.html">Strona główna</a>
+                    <a class="nav-link" href="index.php">Strona główna</a>
                 </li>
 
                 <li class="nav-item  mx-3 my-1">
-                    <a class="nav-link active" href="galeria.html">Galeria</a>
+                    <a class="nav-link" href="galeria.php">Galeria</a>
                 </li>
 
                 <li class="nav-item  mx-3 my-1">
-                    <a class="nav-link" href="aktualnosci.html">Aktualnosci</a>
+                    <a class="nav-link active" href="Aktualnosci.php">Aktualnosci</a>
                 </li>
 
                 <li class="nav-item  mx-3 my-1">
-                    <a class="nav-link " href="kontakt.html">Kontakt</a>
+                    <a class="nav-link " href="kontakt.php">Kontakt</a>
                 </li>
             </ul>
 
@@ -53,27 +53,10 @@
     </nav>
 
     <div class="heading justify-content-center d-flex">
-        <div class="text-white pt-5 pb-4 lh-lg fw-bold">Nasze produkty!</div>
+        <div class="text-white pt-5 pb-4 lh-lg fw-bold">Zobacz co nowego!</div>
     </div>
 
-    <div class="container">
-        <div class="row mx-3 fw-normal mt-4 border-bottom border-2">
-            <div class="col-auto nav-link active_galery" style="cursor: pointer;">Wszystko</div>
-            <div class="col-auto nav-link" style="cursor: pointer;">Kwiaty i sadzonki</div>
-            <div class="col-auto nav-link" style="cursor: pointer;">Wiązanki</div>
-            <div class="col-auto nav-link" style="cursor: pointer;">Wieńce</div>
-            <div class="col-auto nav-link" style="cursor: pointer;">Dekoracje</div>
-        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-        <div class="row my-5 mx-2 g-3">
-
-            <img src="img/" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 imgs">
-
-
-
-
-        </div>
-    </div>
-    
 </body>
 </html>

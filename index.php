@@ -31,19 +31,19 @@
 
             <ul class="navbar-nav ms-lg-auto mb-2 mb-lg-0 fs-5">
                 <li class="nav-item  mx-3 my-1">
-                    <a class="nav-link active" href="index.html">Strona główna</a>
+                    <a class="nav-link active" href="index.php">Strona główna</a>
                 </li>
 
                 <li class="nav-item  mx-3 my-1">
-                    <a class="nav-link" href="galeria.html">Galeria</a>
+                    <a class="nav-link" href="galeria.php">Galeria</a>
                 </li>
 
                 <li class="nav-item  mx-3 my-1">
-                    <a class="nav-link" href="aktualnosci.html">Aktualnosci</a>
+                    <a class="nav-link" href="aktualnosci.php">Aktualnosci</a>
                 </li>
 
                 <li class="nav-item  mx-3 my-1">
-                    <a class="nav-link" href="kontakt.html">Kontakt</a>
+                    <a class="nav-link" href="kontakt.php">Kontakt</a>
                 </li>
             </ul>
 
@@ -51,13 +51,13 @@
     </nav>
     <div id="section1">
             <div class="row gy-3 d-none d-sm-flex fs-4 fw-bold">
-                <a href="#" class="col-12 col-sm-8 col-md-5 col-lg-4 col-xl-3 rounded-end bg-blue py-xxl-2 py-1 text-white ps-5">Kwiaty i sadzonki</a>
+                <a href="galeria.php?g=kis" class="col-12 col-sm-8 col-md-5 col-lg-4 col-xl-3 rounded-end bg-blue py-xxl-2 py-1 text-white ps-5">Kwiaty i sadzonki</a>
                 <div class="w-100"></div>
-                <a href="#" class="col-12 col-sm-8 col-md-5 col-lg-4 col-xl-3 rounded-end bg-blue py-xxl-2 py-1 text-white ps-5">Wiązanki</a>
+                <a href="galeria.php?g=wiazanki" class="col-12 col-sm-8 col-md-5 col-lg-4 col-xl-3 rounded-end bg-blue py-xxl-2 py-1 text-white ps-5">Wiązanki</a>
                 <div class="w-100"></div>
-                <a href="#" class="col-12 col-sm-8 col-md-5 col-lg-4 col-xl-3 rounded-end bg-blue py-xxl-2 py-1 text-white ps-5">Wieńce</a>
+                <a href="galeria.php?g=wience" class="col-12 col-sm-8 col-md-5 col-lg-4 col-xl-3 rounded-end bg-blue py-xxl-2 py-1 text-white ps-5">Wieńce</a>
                 <div class="w-100"></div>
-                <a href="#" class="col-12 col-sm-8 col-md-5 col-lg-4 col-xl-3 rounded-end bg-blue py-xxl-2 py-1 text-white ps-5"></a>
+                <a href="galeria.php?g=dekoracje" class="col-12 col-sm-8 col-md-5 col-lg-4 col-xl-3 rounded-end bg-blue py-xxl-2 py-1 text-white ps-5">Dekoracje</a>
             </div>
     </div>
 
@@ -74,7 +74,7 @@
                 <div class="col-10 col-xxl-7 fs-4 fw-bold my-2 my-sm-3 my-md-4 my-lg-3 my-xl-4 pink">Codziennie gwarancja świeżych kwiatów!</div>
                 <p class="gray col-11 col-xl-10 col-xxl-8 mb-4 fs-5 fw-lighter">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet ex eros. Integer at magna porttitor, ornare turpis sit amet, consectetur quam. Praesent massa mauris, egestas laoreet ultrices sit amet, mattis porttitor sapien. Donec sed quam non metus commodo.</p>
                 <div class="w-100"></div>
-                <a href="#" class="col-10 col-sm-7 fs-5 fw-bolder btn">Skontaktuj się!</a>
+                <a href="kontakt.php" class="col-10 col-sm-7 fs-5 fw-bolder btn">Skontaktuj się!</a>
     
             </div>
 
@@ -104,10 +104,10 @@
                 <div class="col col-lg-4 mb-0 text-muted order-2 order-lg-1">&copy; 2022 Bartosz Wiaderek</div>
                 <img src="img/logo-sm.png" class="order-1 order-lg-2 col-12 col-lg-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto" alt="">
                 <div class="nav col-md-4 justify-content-end d-none d-lg-flex order-3">
-                    <li class="nav-item"><a href="index.html" class="nav-link px-1 px-xl-2 px-xxl-3 text-muted">Strona główna</a> </li>
-                    <li class="nav-item"><a href="galeria.html" class="nav-link px-1 px-xl-2 px-xxl-3 text-muted">Galeria</a> </li>
-                    <li class="nav-item"><a href="aktualnosci.html" class="nav-link px-1 px-xl-2 px-xxl-3 text-muted">Aktualnosci</a> </li>
-                    <li class="nav-item"><a href="kontakt.html" class="nav-link px-1 px-xl-2 px-xxl-3 text-muted">Kontakt</a> </li>
+                    <li class="nav-item"><a href="index.php" class="nav-link px-1 px-xl-2 px-xxl-3 text-muted">Strona główna</a> </li>
+                    <li class="nav-item"><a href="galeria.php" class="nav-link px-1 px-xl-2 px-xxl-3 text-muted">Galeria</a> </li>
+                    <li class="nav-item"><a href="aktualnosci.php" class="nav-link px-1 px-xl-2 px-xxl-3 text-muted">Aktualnosci</a> </li>
+                    <li class="nav-item"><a href="kontakt.php" class="nav-link px-1 px-xl-2 px-xxl-3 text-muted">Kontakt</a> </li>
                 </div>
             </div>
         </footer>

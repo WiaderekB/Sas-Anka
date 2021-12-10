@@ -19,8 +19,13 @@
     cursor: pointer;
     object-fit: cover;
     transition: transform 0.2s ease-out;
+    display: none;
 }
 
 .imgs:hover{
     transform: scale(1.1);
+}
+
+.vis{
+    display: unset !important;
 }
