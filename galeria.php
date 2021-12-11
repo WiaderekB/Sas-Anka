@@ -16,11 +16,15 @@
     <title>Sas-Anka - Galeria</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/heading.css">
     <link rel="stylesheet" href="css/galeria.css">
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body class="bg-light">
 
@@ -53,7 +57,7 @@
                 </li>
 
                 <li class="nav-item  mx-3 my-1">
-                    <a class="nav-link " href="kontakt.php">Kontakt</a>
+                    <a class="nav-link"  href="kontakt.php">Kontakt</a>
                 </li>
             </ul>
 
@@ -86,8 +90,15 @@
         <?php
         if(mysqli_num_rows($res) > 0){
             while($images = mysqli_fetch_assoc($res)) {?>
-            <img src="<?=$images['img']?>" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 imgs<?=$images['category']?>">
 
+            <div id="pageone" data-role="main" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2<?=$images['category']?>">
+                <a href="#myPopup" data-rel="popup" data-position-to="window">
+                <img src="<?=$images['img']?>" class="imgs"></a>
+
+                <div data-role="popup" id="myPopup">
+                <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a><img src="<?=$images['img']?>" style="max-height: 80vh;">
+            </div>
+        </div>
 
         <?php }} ?>
 

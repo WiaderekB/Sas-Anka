@@ -151,6 +151,13 @@ footer img{
 .light-gray{
     color: var(--light_gray) !important;
 }
+.bg-gray{
+    background-color: var(--background-gray);
+}
+
+.nav-link{
+    font-weight: normal !important;
+}
 
 html,
 body{
