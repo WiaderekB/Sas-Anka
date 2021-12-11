@@ -15,6 +15,10 @@
             max-height: 12.5rem;
             object-fit: cover !important;
             width: 100% !important;
+            transition: all 0.2s ease-out;
+        }
+        .imgs:hover{
+            transform: scale(1.1);
         }
     </style>
 
@@ -63,34 +67,26 @@
     <div class="container my-5">
         <div class="row mb-5">
             <div class="col-12 mb-3">
-                <div class="col-6"><img src="img/bike.jpg" class="pd-5 pe-4 img-fluid float-start" ></div>
+                <div class="col-12 col-md-6"><img src="img/bike.jpg" class="pd-5 pe-4 img-fluid float-start" ></div>
 
                 <div class="col ff-2 blue fs-1 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-                <div class="col p-4 gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic esse quod magni fugiat nobis dolore. Officia, provident necessitatibus. Cumque, alias.</div>
+                <div class="col p-md-4 gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic esse quod magni fugiat nobis dolore. Officia, provident necessitatibus. Cumque, alias.</div>
             </div>
         </div>  
 
         <h3 class='fw-bolder mt-5 mb-4'>Zdjęcia:</h3>
 
-        <div class="row col-12 bg-gray g-3 mx-auto">
+        <div class="row col-12 bg-gray g-3 pb-3 mx-auto">
 
-        <div id="pageone" data-role="main" class="col-12 col-sm-6 col-lg-4 col-xxl-3 ">
-            <a href="#myPopup" data-rel="popup" data-position-to="window">
-            <img src="img/bouquet.jpg" class="imgs"></a>
+            <div id="pageone" data-role="main" class="col-12 col-sm-6 col-lg-4 col-xxl-3 ">
+                <a href="#myPopup" data-rel="popup" data-position-to="window">
+                <img src="img/bouquet.jpg" class="imgs"></a>
 
-            <div data-role="popup" id="myPopup">
-            <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a><img src="img/bouquet.jpg" style="max-height: 80vh;">
+                <div data-role="popup" id="myPopup">
+                <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a><img src="img/bouquet.jpg" style="max-height: 80vh;">
+                </div>
             </div>
-        </div>
 
-        <div id="pageone" data-role="main" class="col-12 col-sm-6 col-lg-4 col-xxl-3 ">
-            <a href="#myPopup" data-rel="popup" data-position-to="window">
-            <img src="img/bouquet.jpg" class="imgs"></a>
-
-            <div data-role="popup" id="myPopup">
-            <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a><img src="img/bouquet.jpg" style="max-height: 80vh;">
-            </div>
-        </div>
             
 
         </div>

@@ -15,7 +15,7 @@
     $fileTmpName = $_FILES['img']['tmp_name'];
 
 
-    $fileDestination = 'uploads_news/'.uniqid().'_'.$fileName;
+    $fileDestination = 'uploads_news/'.uniqid(). '.' . pathinfo($fileName, PATHINFO_EXTENSION);
     move_uploaded_file($fileTmpName, $fileDestination);
     
     $conn = mysqli_connect($host, $db_user, $db_pass, $db_name);

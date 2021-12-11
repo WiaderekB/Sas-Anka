@@ -169,6 +169,9 @@ a{
     text-decoration: none !important
 }
 
+button.ui-btn, .ui-controlgroup-controls button.ui-btn-icon-notext{
+    width: unset !important;
+}
 
 .heading{
     margin-top: -1.5rem;

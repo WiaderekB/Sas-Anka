@@ -91,7 +91,7 @@
         if(mysqli_num_rows($res) > 0){
             while($images = mysqli_fetch_assoc($res)) {?>
 
-            <div id="pageone" data-role="main" class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2<?=$images['category']?>">
+            <div id="pageone" data-role="main" class="record col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2<?=$images['category']?>">
                 <a href="#myPopup" data-rel="popup" data-position-to="window">
                 <img src="<?=$images['img']?>" class="imgs"></a>
 
@@ -126,7 +126,7 @@
 
     <?php
     if (!isset($_GET['g'])) {
-        echo "$('.imgs').addClass('vis');";
+        echo "$('.record').addClass('vis');";
 
         echo "$('#all').addClass('active_galery');";
     }  else {
@@ -156,10 +156,10 @@
         $('#'+ item).addClass('active_galery');
 
         if (item == 'all'){
-            $('.imgs').addClass('vis');
+            $('.record').addClass('vis');
 
         } else {
-        $('.imgs').removeClass('vis');
+        $('.record').removeClass('vis');
 
         $('.' + item).addClass('vis');
         }

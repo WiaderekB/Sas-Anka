@@ -74,7 +74,7 @@ $res = mysqli_query($conn, $sql);
 
             <input class='col-12 mb-4' type="text" name="text">
 
-            <h5 class="col-12">Dodaj więcej zdjęć</h5>
+            <h5 class="col-12">Dodaj więcej zdjęć (opcjonalne)</h5>
 
             <input name="upload[]" type="file" multiple="multiple" class="col-12 mb-4"/>
 

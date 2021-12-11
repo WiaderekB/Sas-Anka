@@ -18,7 +18,7 @@ if($_FILES['file']['name'] != '') {
         $fileName = $_FILES['file']['name'];
         $fileTmpName = $_FILES['file']['tmp_name'];
 
-        $fileDestination = 'uploads_gallery/'.uniqid().'_'.$fileName;
+        $fileDestination = 'uploads_gallery/'.uniqid().'.'. pathinfo($fileName, PATHINFO_EXTENSION);
         move_uploaded_file($fileTmpName, $fileDestination);
         
         $conn = mysqli_connect($host, $db_user, $db_pass, $db_name);

@@ -19,9 +19,13 @@
     cursor: pointer;
     object-fit: cover;
     transition: transform 0.2s ease-out;
-    display: none;
     height: 15rem;
     width: 100%!important;
+}
+
+.record {
+    display: none;
+
 }
 
 @media (max-width: 576px) {
