@@ -9,7 +9,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/heading.css">
     <link rel="stylesheet" href="css/aktualnosci.css">
@@ -94,7 +94,7 @@
                 <img src="<?=$images['img']?>" class="imgs" alt="">
                 <h3 class='blue fw-bolder my-3'><?=$images['title']?></h3>
                 <p class='light-gray fw-light fs-7'><?=$insertion?></p>
-                <a href="artykul.php?id=<?=$images['id']?>" class="btn btn2 fs-5 my-2">Zobacz więcej</a>
+                <a href="artykul.php?id=<?=$images['id']?>" class="btn btn2 fs-5 my-2 white">Zobacz więcej</a>
             </div>
 
         <?php }} ?>

@@ -92,10 +92,10 @@
             while($images = mysqli_fetch_assoc($res)) {?>
 
             <div id="pageone" data-role="main" class="record col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2<?=$images['category']?>">
-                <a href="#myPopup" data-rel="popup" data-position-to="window">
+                <a href="#<?=$images['img']?>" data-rel="popup" data-position-to="window">
                 <img src="<?=$images['img']?>" class="imgs"></a>
 
-                <div data-role="popup" id="myPopup">
+                <div data-role="popup" id="<?=$images['img']?>">
                 <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a><img src="<?=$images['img']?>" style="max-height: 80vh;">
             </div>
         </div>
@@ -130,22 +130,23 @@
 
         echo "$('#all').addClass('active_galery');";
     }  else {
-        switch ($show){
-            case 'kis';
+        switch ($_GET['g']){
+            case 'kis':
                 echo "$('.kis').addClass('vis');";
-                echo "$('kis').addClass('active_galery');";
-                
-            case 'wiazanki';
+                echo "$('#kis').addClass('active_galery');";
+                break;
+            case 'wiazanki':
                 echo "$('.wiazanki').addClass('vis');";
-                echo "$('wiazanki').addClass('active_galery');";
-
-            case 'wience';
+                echo "$('#wiazanki').addClass('active_galery');";
+                break;
+            case 'wience':
                 echo "$('.wience').addClass('vis');";
-                echo "$('wience').addClass('active_galery');";
-
-            case 'dekoracje';
+                echo "$('#wience').addClass('active_galery');";
+                break;
+            case 'dekoracje':
                 echo "$('.dekoracje').addClass('vis');";
                 echo "$('#dekoracje').addClass('active_galery');";
+                break;
         }
     }
     ?>

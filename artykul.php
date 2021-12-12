@@ -1,5 +1,17 @@
+<?php
+    require_once('connect.php');
+
+    $id = $_GET['id'];
+
+    $conn = mysqli_connect($host, $db_user, $db_pass, $db_name);
+    $sql = "SELECT * FROM news WHERE id='$id' ORDER BY id DESC";
+    $res = mysqli_query($conn, $sql);
+    $data = mysqli_fetch_assoc($res);
+
+    $images = $data['add_images'];
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,6 +69,10 @@
         </li>
 
         <li class="nav-item  mx-3 my-1">
+            <a class="nav-link" href="index.php#section3">Poczta kwiatowa</a>
+        </li>
+
+        <li class="nav-item  mx-3 my-1">
             <a class="nav-link " href="kontakt.php">Kontakt</a>
         </li>
     </ul>
@@ -67,27 +83,38 @@
     <div class="container my-5">
         <div class="row mb-5">
             <div class="col-12 mb-3">
-                <div class="col-12 col-md-6"><img src="img/bike.jpg" class="pd-5 pe-4 img-fluid float-start" ></div>
+                <div class="col-12 col-md-6"><img src="<?=$data['img']?>" class="pd-5 pe-4 img-fluid float-start" ></div>
 
-                <div class="col ff-2 blue fs-1 text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-                <div class="col p-md-4 gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic esse quod magni fugiat nobis dolore. Officia, provident necessitatibus. Cumque, alias.</div>
+                <div class="col ff-2 blue fs-1 mt-4 text-justify"><?=$data['title']?></div>
+                <div class="col p-md-4 gray fs-7"><?=$data['insertion']?></div>
             </div>
         </div>  
 
-        <h3 class='fw-bolder mt-5 mb-4'>Zdjęcia:</h3>
+        <?php
+        if ($images !='') {
+        echo "<h3 class='fw-bolder mt-5 mb-4'>Zdjęcia:</h3>";
 
-        <div class="row col-12 bg-gray g-3 pb-3 mx-auto">
+        echo "<div class='row col-12 bg-gray g-3 pb-3 mx-auto'>";
+        
+
+        $words = explode(', ', $images);
+        
+            foreach ($words as $word) { ?>
 
             <div id="pageone" data-role="main" class="col-12 col-sm-6 col-lg-4 col-xxl-3 ">
-                <a href="#myPopup" data-rel="popup" data-position-to="window">
-                <img src="img/bouquet.jpg" class="imgs"></a>
+                <a href="#<?=$word?>" data-rel="popup" data-position-to="window">
+                <img src="<?=$word?>" class="imgs"></a>
 
-                <div data-role="popup" id="myPopup">
-                <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a><img src="img/bouquet.jpg" style="max-height: 80vh;">
+                <div data-role="popup" id="<?=$word?>">
+                <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right"></a><img src="<?=$word?>" style="max-height: 80vh;">
                 </div>
             </div>
 
-            
+        <?php
+            }
+        }
+        ?>
+
 
         </div>
 

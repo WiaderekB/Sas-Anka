@@ -5,6 +5,21 @@
 
     require_once('connect.php');
 
+    if ($_FILES['addImages'] != '') {
+        $finalImagesName = '';
+        foreach ($_FILES['addImages']['tmp_name'] as $key => $value) {
+            $imageName = $_FILES['addImages']['name'][$key];
+            $imageTmpName = $_FILES['addImages']['tmp_name'][$key];
+
+
+            $fileDestination = 'uploads_news/'.uniqid(). '.' . pathinfo($imageName, PATHINFO_EXTENSION);
+
+            $finalImagesName = $finalImagesName . $fileDestination . ', ';
+            
+            move_uploaded_file($imageTmpName, $fileDestination);
+        }
+    }
+    
     $title = $_POST['title'];
     $insertion = $_POST['text'];
 
@@ -20,7 +35,7 @@
     
     $conn = mysqli_connect($host, $db_user, $db_pass, $db_name);
 
-    $sql = "INSERT INTO news(title, insertion, img) VALUES('$title', '$insertion', '$fileDestination')";
+    $sql = "INSERT INTO news(title, insertion, img, add_images) VALUES('$title', '$insertion', '$fileDestination', '$finalImagesName')";
 
 
     mysqli_query($conn, $sql);

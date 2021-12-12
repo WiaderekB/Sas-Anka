@@ -154,7 +154,9 @@ footer img{
 .bg-gray{
     background-color: var(--background-gray);
 }
-
+.white{
+    color: var(--background-gray);
+}
 .nav-link{
     font-weight: normal !important;
 }

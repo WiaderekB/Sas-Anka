@@ -76,7 +76,7 @@ $res = mysqli_query($conn, $sql);
 
             <h5 class="col-12">Dodaj więcej zdjęć (opcjonalne)</h5>
 
-            <input name="upload[]" type="file" multiple="multiple" class="col-12 mb-4"/>
+            <input name="addImages[]" type="file" multiple="multiple" class="col-12 mb-4"/>
 
 
             <div class="col-12 my-3"><input type="submit" value="Dodaj post do aktualności"></div>
@@ -115,8 +115,6 @@ $res = mysqli_query($conn, $sql);
                 while($images = mysqli_fetch_assoc($res)) {
                     $insertion = get_snippet($images['insertion'], 40) . '. . .';
                     ?>
-
-
                 
                 <div class="col-12 col-md-6 col-lg-4 text-center border border-2">
                     <h3><?=$images['title']?></h3>

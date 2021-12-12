@@ -57,7 +57,7 @@
                 <div class="w-100"></div>
                 <a href="galeria.php?g=wience" class="col-12 col-sm-8 col-md-5 col-lg-4 col-xl-3 rounded-end bg-blue py-xxl-2 py-1 text-white ps-5">Wieńce</a>
                 <div class="w-100"></div>
-                <a href="galeria.php?g=dekoracje" class="col-12 col-sm-8 col-md-5 col-lg-4 col-xl-3 rounded-end bg-blue py-xxl-2 py-1 text-white ps-5">Dekoracje</a>
+                <a href="#section3" class="col-12 col-sm-8 col-md-5 col-lg-4 col-xl-3 rounded-end bg-blue py-xxl-2 py-1 text-white ps-5">Poczta kwiatowa</a>
             </div>
     </div>
 
