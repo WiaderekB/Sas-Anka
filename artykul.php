@@ -28,6 +28,7 @@
             object-fit: cover !important;
             width: 100% !important;
             transition: all 0.2s ease-out;
+            min-height: 100%;
         }
         .imgs:hover{
             transform: scale(1.1);
@@ -66,10 +67,6 @@
 
         <li class="nav-item  mx-3 my-1">
             <a class="nav-link active" href="aktualnosci.php">Aktualnosci</a>
-        </li>
-
-        <li class="nav-item  mx-3 my-1">
-            <a class="nav-link" href="index.php#section3">Poczta kwiatowa</a>
         </li>
 
         <li class="nav-item  mx-3 my-1">
