@@ -14,7 +14,7 @@
         $_SESSION['logged'] = true;
         unset($_SESSION["blad"]);
 
-        header('Location: panel.php');
+        header('Location: galeria_panel.php');
 
     } else {
         header('Location: zaloguj.php');

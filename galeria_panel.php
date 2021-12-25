@@ -45,13 +45,6 @@
             </div>
 
             <ul class="navbar-nav mb-2 mb-lg-0 fs-5">
-                <li class="nav-item  mx-3 my-1">
-                    <a class="nav-link active" href="galeria_panel.php">Galeria</a>
-                </li>
-
-                <li class="nav-item  mx-3 my-1">
-                    <a class="nav-link" href="aktualnosci_panel.php">Aktualności</a>
-                </li>
                 <li class="nav-item  ms-lg-auto mx-3 my-1">
                     <a class="nav-link " href="logout.php">Wyloguj</a>
                 </li>

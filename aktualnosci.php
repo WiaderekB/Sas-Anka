@@ -56,49 +56,16 @@
         <div class="text-white pt-5 pb-4 lh-lg fw-bold">Zobacz co nowego!</div>
     </div>
 
-    <?php
-        require_once('connect.php');
-        $conn = mysqli_connect($host, $db_user, $db_pass, $db_name);
-        $sql = "SELECT * FROM news ORDER BY id DESC";
-        $res = mysqli_query($conn, $sql);
-
-        function get_snippet( $str, $wordCount = 10 ) {
-            return implode( 
-              '', 
-              array_slice( 
-                preg_split(
-                  '/([\s,\.;\?\!]+)/', 
-                  $str, 
-                  $wordCount*2+1, 
-                  PREG_SPLIT_DELIM_CAPTURE
-                ),
-                0,
-                $wordCount*2-1
-              )
-            );
-          }
-
-    ?>
 
     <div class="container">
         <div class="row mx-3 mt-5 mb-5 pb-4 border-bottom border-2"></div>
-        <div class="row mx-2 g-5">
+        <div class="row mx-2 g-4">
 
-        <?php
-        if(mysqli_num_rows($res) > 0){
-            while($images = mysqli_fetch_assoc($res)) {
-                $insertion = get_snippet($images['insertion'], 40) . '. . .';
-                ?>
 
-            <div class="col-12 col-md-6 col-xl-4 ">
-                <img src="<?=$images['img']?>" class="imgs" alt="">
-                <h3 class='blue fw-bolder my-3'><?=$images['title']?></h3>
-                <p class='light-gray fw-light fs-7'><?=$insertion?></p>
-                <a href="artykul.php?id=<?=$images['id']?>" class="btn btn2 fs-5 my-2 white">Zobacz więcej</a>
-            </div>
-
-        <?php }} ?>
-
+        <iframe class='col-12 col-md-6 col-xl-4' src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D415602350298041%26id%3D116046146920331&show_text=true&width=500" height="646" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        <iframe class='col-12 col-md-6 col-xl-4' src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D410821874109422%26id%3D116046146920331&show_text=true&width=500" height="684" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        <iframe class='col-12 col-md-6 col-xl-4' src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D383520920172851%26id%3D116046146920331&show_text=true&width=500" height="703" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        
         </div>
     </div>
 
