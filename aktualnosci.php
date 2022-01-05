@@ -15,6 +15,36 @@
     <link rel="stylesheet" href="css/aktualnosci.css">
 </head>
 <body class="bg-light">
+<!-- Messenger Wtyczka czatu Code -->
+<div id="fb-root"></div>
+
+<!-- Your Wtyczka czatu code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+
+<script>
+  var chatbox = document.getElementById('fb-customer-chat');
+  chatbox.setAttribute("page_id", "116046146920331");
+  chatbox.setAttribute("attribution", "biz_inbox");
+</script>
+
+<!-- Your SDK code -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v12.0'
+    });
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/pl_PL/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 px-3 px-6 mb-n1">
 
@@ -61,10 +91,34 @@
         <div class="row mx-3 mt-5 mb-5 pb-4 border-bottom border-2"></div>
         <div class="row mx-2 g-4">
 
+        <?php
+$ch = curl_init();
 
-        <iframe class='col-12 col-md-6 col-xl-4' src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D415602350298041%26id%3D116046146920331&show_text=true&width=500" height="646" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-        <iframe class='col-12 col-md-6 col-xl-4' src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D410821874109422%26id%3D116046146920331&show_text=true&width=500" height="684" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-        <iframe class='col-12 col-md-6 col-xl-4' src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D383520920172851%26id%3D116046146920331&show_text=true&width=500" height="703" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+curl_setopt($ch, CURLOPT_URL, 'https://graph.facebook.com/v12.0/116046146920331?fields=posts%7Bid%7D&access_token=EAANRAo8wXYQBAD4upvexLI8WvAuu6jLtX0m8HzXl8VxtLwUscV8V5j3E6ZBlITNnuINpSXdHYTmoyzPZAx8k8nLkl3UbNJFoLZCRZBzqEXqA3Kr9hWIWoqIqZAiJBH9yITSORZAxlKVkgsT8SixWGJuLrAryMqJVfoIJgzMPmyoVhES0ko6KKko1BZAjUZAZBQYZAbWZBRYmilOeQ2GvwJHZB6G2');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+$result = curl_exec($ch);
+if (curl_errno($ch)) {
+    echo 'Error:' . curl_error($ch);
+}
+curl_close($ch);
+$result = json_decode($result);
+
+foreach ($result->posts->data as $id)
+{
+    $id = $id->id;
+    $start = strpos($id, '_');
+
+    $final_id = substr($id, $start+1, 16);
+
+    ?>
+        <iframe class='col-12 col-md-6 col-xl-4' src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3D<?=$final_id?>%26id%3D116046146920331&show_text=true" height="700" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+<?php
+}
+?>
+        
+
         
         </div>
     </div>
